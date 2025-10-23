@@ -41,13 +41,13 @@ OUTPUT_CSV = "resultados_mlp_15bases_10fold_cv_inc.csv"
 def load_base_list():
     """Carrega a lista dos nomes dos arquivos das 15 melhores bases do KNN."""
     try:
-        if not os.path.exists(KNN_BASES_FILE):
+        if not os.path.exists(KNN_BEST_BASES_FILE):
             raise FileNotFoundError(
-                f"Arquivo de bases não encontrado em: {KNN_BASES_FILE}"
+                f"Arquivo de bases não encontrado em: {KNN_BEST_BASES_FILE}"
             )
 
-        df_bases = pd.read_csv(KNN_BASES_FILE, sep=";", decimal=",")
-        
+        df_bases = pd.read_csv(KNN_BEST_BASES_FILE, sep=";", decimal=",")
+
         df_bases = df_bases.head(15)  # Seleciona as 15 primeiras linhas
         # Garante que a coluna 'Base' existe e carrega os nomes
         if "Base" not in df_bases.columns:

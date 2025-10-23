@@ -1,0 +1,14 @@
+# Ignorar arquivos CSV (geralmente grandes)
+*.csv
+
+# Ignorar subpasta de bases geradas
+bases_geradas/
+
+# Ignorar checkpoints do Jupyter
+.ipynb_checkpoints/
+
+# Ignorar arquivos temporários do VS Code
+tempCodeRunnerFile*
+
+# Ignorar imagens geradas ou de teste
+imagens/
